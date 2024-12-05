@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animated Login Form</title>
+  <style>
+    /* Define some styles for the form */
+    form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background-color: crimson;
+      padding: 20px;
+      box-shadow: 0 0 10px #000000;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      border: none;
+    outline: none;
+    padding: 11px 25px;
+    background: #45f3ff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    input[type="submit"]:active {
+    opacity: 0.8;
+}
+  </style>
+</head>
+<body>
+  <form id="login-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Login">
+  </form>
+  
+  <script>
+    // Get the form element
+    var form = document.getElementById("login-form");
+
+    // Add an event listener for the form's submit event
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Add a class to the form to animate it
+      form.classList.add("animate");
+
+      // Log the user in (replace with your own login logic)
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      console.log("Logging in with username: " + username + " and password: " + password);
+
+      // Redirect to the main page after a short delay
+      setTimeout(function() {
+        window.location.href = "file:///C:/Users/Pavlo/Desktop/html/index.html";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
